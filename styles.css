@@ -21,3 +21,119 @@ body {
 img {
     display: block;
 }
+
+.profile {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "profile-image profile-user-settings"
+        "profile-image profile-stats"
+        "profile-image profile-bio";
+    align-self: center;
+}
+
+.profile-image {
+    grid-area: profile-image
+}
+
+.profile-user-settings {
+    grid-area: profile-user-settings;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.profile-stats {
+    grid-area: profile-stats;
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-stats ul{
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.profile-bio {
+    grid-area: profile-bio;
+}
+.profile-bio p {
+    padding: 20px;
+    margin: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    gap: 10px;
+    
+    position: relative;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-position: 50% 50%;
+    object-fit: cover;
+    overflow: hidden;
+align-self: center;
+    cursor: pointer;
+}
+
+.gallery-item-info ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.gallery-item-info {
+    align-items: center;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item:hover .gallery-item-info {
+    opacity: 0.75;
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
